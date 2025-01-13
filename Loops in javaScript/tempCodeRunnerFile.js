@@ -1,1 +1,2 @@
-availableTEas.push(tea[i])
+? console.log("true")
+    // : console.log("false");
