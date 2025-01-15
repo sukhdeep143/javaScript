@@ -103,32 +103,28 @@ function isItTruthy(input) {
 //     return arr;
 //   }
 
-
 /*
 Task 1: Array Filtering
 
 Write a function filterNumbers(arr) that returns only numbers from a mixed array
 */
 
-function filterNumbers(arr){
-    let number = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] == "string") {
-          continue;
-        }
-        
-        number.push(arr[i])
-       
-      }
-      return number;
+function filterNumbers(arr) {
+  let number = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] == "string") {
+      continue;
+    }
 
+    number.push(arr[i]);
+  }
+  return number;
 }
 let arr1 = [1, 3, 4, 5, 6, 7, "hi", "one"];
 
+let number = filterNumbers(arr1);
 
-let number = filterNumbers(arr1)
-
-console.log(number)
+console.log(number);
 
 /*
 Task 2: Array Reversal
@@ -137,12 +133,9 @@ Write a function reverseArray(arr) that reverses the array
 
 */
 
-function reverseArray(arr){
-
-    
-    return arr.reverse();
+function reverseArray(arr) {
+  return arr.reverse();
 }
-
 
 console.log(reverseArray(arr1));
 
@@ -154,17 +147,17 @@ Write a function findMax(arr) that returns the largest number in the array
 
 */
 
-function findMax(arr){
-        let num = arr[0];
-       for(let i = 0; i < arr.length; i++){
-            if(arr[i] > num ){
-                num = arr[i];
-            }
-       }
-       return num;
+function findMax(arr) {
+  let num = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > num) {
+      num = arr[i];
+    }
+  }
+  return num;
 }
 
-let numbers = [1,3,4,5,6,7,8,9];
+let numbers = [1, 3, 4, 5, 6, 7, 8, 9];
 
 console.log(findMax(numbers));
 
@@ -174,18 +167,17 @@ Task 4: Remove Duplicates from an Array
 Write a function removeDuplicates(arr) that returns a new array with all duplicates removed
  */
 
-function removeDuplicates(arr){
-    let newSet = [];
-    let seen = [];
+function removeDuplicates(arr) {
+  let newSet = [];
+  let seen = [];
 
-    for(let i = 0; i < arr.length; i++){
-
-        if(!seen[arr[i]]){
-            newSet.push(arr[i]);
-            seen[arr[i]] = true;
-        }
+  for (let i = 0; i < arr.length; i++) {
+    if (!seen[arr[i]]) {
+      newSet.push(arr[i]);
+      seen[arr[i]] = true;
     }
-    return newSet;
+  }
+  return newSet;
 }
 
 // Example usage
@@ -194,24 +186,22 @@ let uniqueNumbers = removeDuplicates(numbers1);
 
 console.log(uniqueNumbers); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
 
-
 // Task 5: Flatten a Nested Array
 
 // Write a function flattenArray(arr) that takes a nested array and returns a single flattened array
 
-
 function flattenArray(arr) {
-    let result = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (Array.isArray(arr[i])) {
-            // Recursively flatten the nested array
-            result = result.concat(flattenArray(arr[i]));
-        } else {
-            // Add the element to the result if it's not an array
-            result.push(arr[i]);
-        }
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      // Recursively flatten the nested array
+      result = result.concat(flattenArray(arr[i]));
+    } else {
+      // Add the element to the result if it's not an array
+      result.push(arr[i]);
     }
-    return result;
+  }
+  return result;
 }
 
 // Example usage
@@ -219,6 +209,3 @@ let nestedArray = [1, [2, [3, 4], 5], [6, 7], 8];
 let flatArray = flattenArray(nestedArray);
 
 console.log(flatArray); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
-
-
-
