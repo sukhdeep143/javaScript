@@ -1,36 +1,36 @@
 /*
-Loops
-Task 1: Sum of First N Natural Numbers
 
 Write a function sumOfN(n) that returns the sum of the first n natural numbers
 function sumOfN(n) {
   let sum = 0;
   for (let i = 1; i <= n; i++) {
     sum += i;
-  }
+    }
   return sum;
-}
+  }
  
 function printMultiplicationTable(n) {
   const table = [];
   for (let i = 1; i <= 10; i++) {
     table.push(`${n} * ${i} = ${n * i}`);
-  }
-  return table;
-}
- 
-function countVowels(str) {
-  let count = 0;
-  const vowels = 'aeiouAEIOU';
-  for (let char of str) {
-    if (vowels.includes(char)) {
-      count++;
     }
+  return table;
   }
-  return count;
-}
-
-
+  
+  function countVowels(str) {
+    let count = 0;
+    const vowels = 'aeiouAEIOU';
+    for (let char of str) {
+      if (vowels.includes(char)) {
+        count++;
+        }
+        }
+        return count;
+        }
+        
+        
+        Loops
+        Task 1: Sum of First N Natural Numbers
 
 Task 2: Multiplication Table
 
