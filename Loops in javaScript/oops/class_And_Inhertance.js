@@ -25,4 +25,5 @@ class Human extends earth{
 
 let myPower = new Human("Goddes", "Thander");
 console.log(myPower.Power());
+console.log(myPower.whoIsStrong());
 
