@@ -1,5 +1,16 @@
 // alert("connceted")
 // console.log("JavaScript is connected to the HTML");
+
+document.getElementById("DarkMode").addEventListener("click", function(){
+   let bodyMain = document.getElementsByTagName("body")[0];
+   bodyMain.style.backgroundColor = bodyMain.style.backgroundColor === "black" ? "white" : "black";
+   bodyMain.style.color = bodyMain.style.color === "white" ? "black" : "white";
+
+})
+
+
+
+
 //  Example one
 document.getElementById("OnClick").addEventListener("click", function(){
     let paragraph = document.getElementById("textToChange");
